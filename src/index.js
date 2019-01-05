@@ -194,8 +194,7 @@ export function createSuppressor({
           },
           mesh: {
             title: "??",
-            description: "Shouldn't be sent over wire",
-            type: "object"
+            description: "Shouldn't be sent over wire"
           },
           err: {
             anyOf: [{ type: "null" }, { type: "string" }]

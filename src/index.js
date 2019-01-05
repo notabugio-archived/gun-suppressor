@@ -74,7 +74,11 @@ const compileEdgeMatchesKey = ajv => schema => (
   keyInParent
 ) => (schema ? prop("#", data) === keyInParent : true);
 
-export function initAjv({ coerceTypes = true, removeAdditional = false, ...config } = {}) {
+export function initAjv({
+  coerceTypes = true,
+  removeAdditional = false,
+  ...config
+} = {}) {
   const ajv = new Ajv({ coerceTypes, removeAdditional, ...config });
 
   ajv.addKeyword("soul", { compile: compileValidateSoul(ajv) });
@@ -177,6 +181,11 @@ export function createSuppressor({
             title: "Adjacent Peers",
             description: "Not really sure how this works",
             type: "string"
+          },
+          ok: {
+            title: "??",
+            description: "Shouldn't actually be sent over wire",
+            type: "boolean"
           },
           how: {
             title: "Used for debugging",

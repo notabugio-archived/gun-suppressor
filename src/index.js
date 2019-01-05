@@ -182,6 +182,12 @@ export function createSuppressor({
             description: "Not really sure how this works",
             type: "string"
           },
+          "$": {
+            title: "??"
+          },
+          "I": {
+            title: "??"
+          },
           ok: {
             title: "??",
             description: "Shouldn't actually be sent over wire",

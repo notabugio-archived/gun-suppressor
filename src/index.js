@@ -121,8 +121,8 @@ export function createSuppressor({
         additionalProperties: false,
         properties: {
           "#": { $ref: `#/definitions/${typeName}Soul` }
-        }
-        // required: ["#"] // Required for sent messages
+        },
+        required: ["#"]
       }),
       assocPath(
         [typeName, "required"],
@@ -159,7 +159,7 @@ export function createSuppressor({
       GunMsg: {
         $async: true,
         type: "object",
-        required: ["#"],
+        // required: ["#"], // necessary over wire
         additionalProperties: false,
         properties: {
           "#": {

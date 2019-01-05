@@ -192,6 +192,11 @@ export function createSuppressor({
             description: "Shouldn't actually be sent over wire (but it is)",
             type: "string"
           },
+          mesh: {
+            title: "??",
+            description: "Shouldn't be sent over wire",
+            type: "object"
+          },
           err: {
             anyOf: [{ type: "null" }, { type: "string" }]
           },

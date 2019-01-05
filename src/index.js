@@ -204,6 +204,11 @@ export function createSuppressor({
             description: "Gun protocol extension added by pistol",
             type: "boolean"
           },
+          ping: {
+            title: "Ping Command",
+            description: "Gun protocol extension added by pistol",
+            type: "boolean"
+          },
           get: {
             title: "Get Command",
             description: "A request for graph data",

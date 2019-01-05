@@ -121,8 +121,8 @@ export function createSuppressor({
         additionalProperties: false,
         properties: {
           "#": { $ref: `#/definitions/${typeName}Soul` }
-        },
-        required: ["#"]
+        }
+        // required: ["#"] // Required for sent messages
       }),
       assocPath(
         [typeName, "required"],

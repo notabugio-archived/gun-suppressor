@@ -182,10 +182,10 @@ export function createSuppressor({
             description: "Not really sure how this works",
             type: "string"
           },
-          "$": {
+          $: {
             title: "??"
           },
-          "I": {
+          I: {
             title: "??"
           },
           ok: {
@@ -235,15 +235,20 @@ export function createSuppressor({
             }
           },
           put: {
-            $async: true,
-            title: "Put Command",
-            description: "A payload of graph data",
-            type: "object",
-            additionalProperties: {
-              anyOf: nodeTypes.map(name => ({
-                $ref: `#/definitions/${name}`
-              }))
-            }
+            anyOf: [
+              {
+                $async: true,
+                title: "Put Command",
+                description: "A payload of graph data",
+                type: "object",
+                additionalProperties: {
+                  anyOf: nodeTypes.map(name => ({
+                    $ref: `#/definitions/${name}`
+                  }))
+                }
+              },
+              { type: "null" }
+            ]
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "name": "gun-suppressor",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "JSON Schema validation for gunDB with ajv",
   "main": "lib/gun-suppressor.js",
   "scripts": {

@@ -203,6 +203,10 @@ export function createSuppressor({
             title: "??",
             description: "Shouldn't be sent over wire"
           },
+          rad: {
+            title: "??",
+            description: "Shouldn't be sent over wire"
+          },
           user: {
             title: "??",
             description: "I don't think this is supposed to be sent over wire"

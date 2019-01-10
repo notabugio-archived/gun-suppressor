@@ -23,7 +23,8 @@ export const PERMISSIVE_SCHEMA = {
         { type: "null" },
         { type: "string" },
         { type: "number" },
-        { type: "boolean" }
+        { type: "boolean" },
+        { type: "object" }
       ]
     },
     soul: {
@@ -201,6 +202,10 @@ export function createSuppressor({
           mesh: {
             title: "??",
             description: "Shouldn't be sent over wire"
+          },
+          user: {
+            title: "??",
+            description: "I don't think this is supposed to be sent over wire"
           },
           err: {
             anyOf: [{ type: "null" }, { type: "string" }]

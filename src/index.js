@@ -229,7 +229,6 @@ export function createSuppressor({
             description: "A request for graph data",
             type: "object",
             additionalProperties: false,
-            required: ["#"],
             properties: {
               "#": {
                 description: "The soul to request data for",

@@ -250,9 +250,12 @@ export function createSuppressor({
                 description: "A payload of graph data",
                 type: "object",
                 additionalProperties: {
-                  anyOf: nodeTypes.map(name => ({
-                    $ref: `#/definitions/${name}`
-                  }))
+                  anyOf: [
+                    ...nodeTypes.map(name => ({
+                      $ref: `#/definitions/${name}`
+                    })),
+                    { type: "null" }
+                  ]
                 }
               },
               { type: "null" }

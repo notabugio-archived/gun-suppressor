@@ -65,7 +65,7 @@ const compilePropsFromSoul = (propMap: any, parentSchema: any) => {
 
     return !R.keysIn(propMap).find(propName => {
       if (!(propName in data)) return false
-      return R.propOr('', propName, soulProps) !== R.prop(R.prop(propName, propMap), data)
+      return R.prop(propName, soulProps) !== R.prop(R.prop(propName, propMap), data)
     })
   }
 }

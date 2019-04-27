@@ -1,11 +1,11 @@
 {
   "name": "@notabug/gun-suppressor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "JSON Schema validation for gunDB with ajv",
   "keywords": [],
   "main": "dist/@notabug/gun-suppressor.umd.js",
   "module": "dist/@notabug/gun-suppressor.es5.js",
-  "typings": "dist/@notabug/types/gun-suppressor.d.ts",
+  "typings": "dist/types/gun-suppressor.d.ts",
   "files": [
     "dist"
   ],
